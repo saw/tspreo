@@ -55,3 +55,17 @@ graph TB
     BinaryExpression -- operatorToken --> PlusToken
     BinaryExpression -- right --> sl3[StringLiteral] -. text .-> t((' world!'))
 ```
+
+```TypeScript
+const seo_landing_page = z.object({
+  title: z.string(),
+  url: z.string(),
+  headline: z.string(),
+  modular_blocks: z.array(
+    z.union([
+      z.object({ headline: headline }),
+      z.object({ triple_block: triple_block }),
+      z.object({ video: video_full_bleed_hero }),
+    ]),
+  ),
+  ```
