@@ -1,10 +1,9 @@
----
-title: Simple Example
----
+
 ```Typescript
 type A = string;
 ```
 
+```mermaid
 graph TB
     p["program"]
     p--> statement
@@ -12,11 +11,8 @@ graph TB
     --> n["name"]
     --> id["Identifier (text: 'A')"]
     tad--> type["type = StringKeyword"]
+```
 
-
----
-title: Complex Example
----
 
 ```TypeScript
 import { readFile } from "fs";
@@ -25,6 +21,7 @@ const myFunc = async (x: string): Promise<string> => {
 };
 ```
 
+```mermaid
 graph TB
     p["program"] --> s[["statements[]"]]
     s .-> ImportDeclaration
@@ -57,4 +54,4 @@ graph TB
     -- left --> id4[Identifier] -. escapedText .-> et5(("'x'"))
     BinaryExpression -- operatorToken --> PlusToken
     BinaryExpression -- right --> sl3[StringLiteral] -. text .-> t((' world!'))
-
+```
