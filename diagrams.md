@@ -69,3 +69,15 @@ const seo_landing_page = z.object({
     ]),
   ),
   ```
+
+```JavaScript
+const exp = ts.factory.createCallExpression(
+  ts.factory.createIdentifier('alert'),
+  undefined,
+  [ts.factory.createStringLiteral('Hello World!')],
+);
+```
+
+```TypeScript
+alert('Hello World');
+```
